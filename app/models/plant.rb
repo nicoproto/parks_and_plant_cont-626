@@ -1,5 +1,7 @@
 class Plant < ApplicationRecord
-  belongs_to :garden
-  #@plant.garden
+  belongs_to :garden # => @plant.garden
+  has_many :plant_tags, dependent: :destroy
+  has_many :tags, through: :plant_tags # => @plant.tags
+
   validates :name, presence: true
 end

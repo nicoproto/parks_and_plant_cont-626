@@ -15,3 +15,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { multipleSelect } from "../components/initSelect2";
+
+document.addEventListener("turbolinks:load", () => {
+  multipleSelect();
+})
